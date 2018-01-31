@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="19dp"
+        android:id="@+id/start_updates_button"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="startUpdatesButtonHandler"
+        android:text="GPS start"/>
+
+    <Button
+        android:id="@+id/stop_updates_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/start_updates_button"
+        android:layout_alignStart="@+id/start_updates_button"
+        android:layout_below="@+id/start_updates_button"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:onClick="stopUpdatesButtonHandler"
+        android:text="GPS Stop" />
+
+    <TextView
+        android:id="@+id/latitude_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/longitude_text"
+        android:layout_alignStart="@+id/longitude_text"
+        android:layout_alignTop="@+id/start_updates_button"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/start_updates_button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="97dp"
+        android:id="@+id/longitude_text"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/last_update_time_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/stop_updates_button"
+        android:layout_alignBottom="@+id/stop_updates_button"
+        android:layout_alignStart="@+id/longitude_text"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/location_inadequate_warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/last_update_time_text"
+        android:layout_alignStart="@+id/last_update_time_text"
+        android:layout_below="@+id/stop_updates_button"
+        android:visibility="invisible" />
+
+</RelativeLayout>
