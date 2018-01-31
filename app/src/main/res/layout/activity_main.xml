@@ -7,7 +7,9 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
-
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -73,5 +75,46 @@
         android:layout_alignStart="@+id/last_update_time_text"
         android:layout_below="@+id/stop_updates_button"
         android:visibility="invisible" />
+</RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/x_text"
+            android:layout_marginTop="177dp"
+            android:text="Accelerometer"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/x_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="17dp" />
+
+        <TextView
+            android:id="@+id/y_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/x_text"
+            android:layout_below="@+id/x_text"
+            android:layout_marginTop="24dp" />
+
+        <TextView
+            android:id="@+id/z_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/y_text"
+            android:layout_below="@+id/y_text"
+            android:layout_marginTop="18dp" />
+    </RelativeLayout>
 
 </RelativeLayout>
